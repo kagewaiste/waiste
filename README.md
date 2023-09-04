@@ -12,9 +12,8 @@ Waste Management Wisely adalah bak sampah pintar sebagai solusi terkini untuk ma
 
 ## Android Application
 <img src="images/apps_1.png" alt="Android Application UI" style="width: 300px; height: 533px;">
-![Android Application UI](images/apps_1.png)
-![Android Application UI](images/apps_2.png)
-![Android Application UI](images/apps_3.png)
-![Android Application UI](images/apps_4.png)
-![Android Application UI](images/apps_5.png)
-![Android Application UI](images/apps_6.png)
+<img src="images/apps_2.png" alt="Android Application UI" style="width: 300px; height: 533px;">
+<img src="images/apps_3.png" alt="Android Application UI" style="width: 300px; height: 533px;">
+<img src="images/apps_4.png" alt="Android Application UI" style="width: 300px; height: 533px;">
+<img src="images/apps_5.png" alt="Android Application UI" style="width: 300px; height: 533px;">
+<img src="images/apps_6.png" alt="Android Application UI" style="width: 300px; height: 533px;">
