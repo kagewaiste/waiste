@@ -11,9 +11,11 @@ Waste Management Wisely adalah bak sampah pintar sebagai solusi terkini untuk ma
 ![Dashboard Ubidots Waiste](images/ubidots_dashboard.png)
 
 ## Android Application
-<img src="images/apps_1.png" alt="Android Application UI" style="width: 300px; height: 533px;">
-<img src="images/apps_2.png" alt="Android Application UI" style="width: 300px; height: 533px;">
-<img src="images/apps_3.png" alt="Android Application UI" style="width: 300px; height: 533px;">
-<img src="images/apps_4.png" alt="Android Application UI" style="width: 300px; height: 533px;">
-<img src="images/apps_5.png" alt="Android Application UI" style="width: 300px; height: 533px;">
-<img src="images/apps_6.png" alt="Android Application UI" style="width: 300px; height: 533px;">
+## Android Application
+
+<img src="images/apps_1.png" alt="Android Application UI" width="300" height="533">
+<img src="images/apps_2.png" alt="Android Application UI" width="300" height="533">
+<img src="images/apps_3.png" alt="Android Application UI" width="300" height="533">
+<img src="images/apps_4.png" alt="Android Application UI" width="300" height="533">
+<img src="images/apps_5.png" alt="Android Application UI" width="300" height="533">
+<img src="images/apps_6.png" alt="Android Application UI" width="300" height="533">
