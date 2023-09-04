@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:contentDescription="Logo"
+        android:src="@drawable/waistelogo" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wujudkan Indonesia bersih dengan WAISTE"
+        android:layout_below="@id/logoImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:textColor="#004F55"
+        android:fontFamily="@font/markazitext"/>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:text="Mulai"
+        android:layout_below="@id/titleTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:paddingStart="35dp"
+        android:paddingEnd="35dp"
+        android:backgroundTint="#006971"
+        android:fontFamily="@font/markazitext"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button"/>
+
+    <!-- Tambahkan elemen-elemen UI lainnya sesuai desain Anda -->
+
+</RelativeLayout>
