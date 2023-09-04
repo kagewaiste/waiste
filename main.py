@@ -16,7 +16,7 @@ from gpiozero import DistanceSensor
 # === Object Detection Start ===
 
 # PIR
-GPIO_PIR = 22
+GPIO_PIR = 14
 # GPIO Mode (BOARD / BCM)
 GPIO.setmode(GPIO.BCM)
 # set GPIO direction (IN / OUT)
@@ -119,65 +119,142 @@ min_duty = 500
 max_duty = 2500
 
 kit = ServoKit(channels=16)
-kit.frequency = 50
+kit.frequency = 60
 
 kit.servo[0].set_pulse_width_range(min_duty, max_duty)
 kit.servo[1].set_pulse_width_range(min_duty, max_duty)
 kit.servo[2].set_pulse_width_range(min_duty, max_duty)
-
-def move_servo1_drop():
-    kit.servo[0].angle = 90  # Gerakan servo 1 untuk menjatuhkan sampah ke servo 2
-    time.sleep(2)
-
-def move_servo2_left():
-    kit.servo[1].angle = 0  # Gerakan servo 2 ke kiri
-    time.sleep(2)
-
-def move_servo2_right():
-    kit.servo[1].angle = 180  # Gerakan servo 2 ke kanan
-    time.sleep(2)
-
-def move_servo3_forward():
-    kit.servo[2].angle = 0  # Gerakan servo 3 ke depan
-    time.sleep(2)
-
-def move_servo3_backward():
-    kit.servo[2].angle = 180  # Gerakan servo 3 ke belakang
-    time.sleep(2)
+kit.servo[3].set_pulse_width_range(min_duty, max_duty)
+kit.servo[4].set_pulse_width_range(min_duty, max_duty)
+kit.servo[5].set_pulse_width_range(min_duty, max_duty)
 
 while True:
-    jenis_sampah = "plastic, paper, metal, other"
-    
-    # Mengendalikan pergerakan servo berdasarkan jenis sampah
-    if jenis_sampah == "plastic":
-        move_servo1_drop()
-        move_servo2_right()
-        move_servo3_forward()
-    elif jenis_sampah == "paper":
-        move_servo1_drop()
-        move_servo2_left()
-        move_servo3_forward()
-    elif jenis_sampah == "metal":
-        move_servo1_drop()
-        move_servo2_right()
-        move_servo3_backward()
-    elif jenis_sampah == "other":
-        move_servo1_drop()
-        move_servo2_left()
-        move_servo3_backward()
-    
-    kit.servo[0].angle = 0
-    time.sleep(2)
+    jenis_sampah = input("Jenis Sampah : ")
+
+    if jenis_sampah == "plastik":
+        kit.servo[0].angle = 50     #plat1
+        kit.servo[1].angle = 130
+        time.sleep(3)
+        kit.servo[0].angle = 90
+        kit.servo[1].angle = 90
+        time.sleep(3)
+
+        kit.servo[2].angle = 50     #plat2
+        kit.servo[3].angle = 130
+        time.sleep(3)
+        kit.servo[2].angle = 90
+        kit.servo[3].angle = 90
+        time.sleep(3)
+
+        kit.servo[4].angle = 50     #plat3
+        kit.servo[5].angle = 130
+        time.sleep(3)
+        kit.servo[4].angle = 90
+        kit.servo[5].angle = 90
+        time.sleep(3)
+        break
+
+    elif jenis_sampah == "kertas":
+        kit.servo[0].angle = 50
+        kit.servo[1].angle = 130
+        time.sleep(3)
+        kit.servo[0].angle = 90
+        kit.servo[1].angle = 90
+        time.sleep(3)
+
+        kit.servo[2].angle = 50
+        kit.servo[3].angle = 130
+        time.sleep(3)
+        kit.servo[2].angle = 90
+        kit.servo[3].angle = 90
+        time.sleep(3)
+
+        kit.servo[4].angle = 130
+        kit.servo[5].angle = 50
+        time.sleep(3)
+        kit.servo[4].angle = 90
+        kit.servo[5].angle = 90
+        time.sleep(3)
+        break
+
+    elif jenis_sampah == "besi":
+        kit.servo[0].angle = 50
+        kit.servo[1].angle = 130
+        time.sleep(3)
+        kit.servo[0].angle = 90
+        kit.servo[1].angle = 90
+        time.sleep(3)
+
+        kit.servo[2].angle = 130
+        kit.servo[3].angle = 50
+        time.sleep(3)
+        kit.servo[2].angle = 90
+        kit.servo[3].angle = 90
+        time.sleep(3)
+
+        kit.servo[4].angle = 130
+        kit.servo[5].angle = 50
+        time.sleep(3)
+        kit.servo[4].angle = 90
+        kit.servo[5].angle = 90
+        time.sleep(3)
+        break
+
+    elif jenis_sampah == "others":
+        kit.servo[0].angle = 50
+        kit.servo[1].angle = 130
+        time.sleep(3)
+        kit.servo[0].angle = 90
+        kit.servo[1].angle = 90
+        time.sleep(3)
+        
+        kit.servo[2].angle = 130
+        kit.servo[3].angle = 50
+        time.sleep(3)
+        kit.servo[2].angle = 90
+        kit.servo[3].angle = 90
+        time.sleep(3)
+
+        kit.servo[4].angle = 50
+        kit.servo[5].angle = 130
+        time.sleep(3)
+        kit.servo[4].angle = 90
+        kit.servo[5].angle = 90
+        time.sleep(3)
+        break
+
+    else:
+        kit.servo[0].angle = 50
+        kit.servo[1].angle = 130
+        time.sleep(3)
+        kit.servo[0].angle = 90
+        kit.servo[1].angle = 90
+        time.sleep(3)
+        
+        kit.servo[2].angle = 130
+        kit.servo[3].angle = 50
+        time.sleep(3)
+        kit.servo[2].angle = 90
+        kit.servo[3].angle = 90
+        time.sleep(3)
+
+        kit.servo[4].angle = 50
+        kit.servo[5].angle = 130
+        time.sleep(3)
+        kit.servo[4].angle = 90
+        kit.servo[5].angle = 90
+        time.sleep(3)
+        break
 
 # === Servo End ===
 
 
 #  === Ultrasonic Start ===
 
-ultrasonic_plastik = DistanceSensor(5, 6) 
-ultrasonic_metal = DistanceSensor(20, 21) 
-ultrasonic_kertas = DistanceSensor(17, 27) 
-ultrasonic_other = DistanceSensor(14, 15) 
+ultrasonic_plastik = DistanceSensor(16, 12) 
+ultrasonic_metal = DistanceSensor(21, 20) 
+ultrasonic_kertas = DistanceSensor(1, 7) 
+ultrasonic_other = DistanceSensor(8, 25) 
 
 def persen(jarak) : 
     if(jarak >= 37) :
@@ -219,15 +296,43 @@ if not EMULATE_HX711:
 else:
     from emulated_hx711 import HX711
 
-def cleanAndExit():
-    print("Cleaning...")
+hx1 = HX711(26, 19)
+hx2 = HX711(13, 6)
+hx3 = HX711(5, 0)
+hx4 = HX711(11, 9)
 
-    if not EMULATE_HX711:
-        GPIO.cleanup()
-        
-    print("Bye!")
-    sys.exit()
+hx1.reset()
+hx1.tare_A()
+hx1.tare_B()
 
-hx = HX711(20, 21)
+hx2.reset()
+hx2.tare_A()
+hx2.tare_B()
+
+hx3.reset()
+hx3.tare_A()
+hx3.tare_B()
+
+hx4.reset()
+hx4.tare_A()
+hx4.tare_B()
+
+while True:
+    try:
+        val1 = round(hx1.get_weight(5), 3)
+        val2 = round(hx2.get_weight(5), 3)
+        val3 = round(hx3.get_weight(5), 3)
+        val4 = round(hx4.get_weight(5), 3)
+
+        print("Berat Sampah Plastik:", val1)
+        print("Berat Sampah Kertas:", val2)
+        print("Berat Sampah Besi:", val3)
+        print("Berat Sampah Lainnya:", val4)
+
+        time.sleep(5)
+
+    except (KeyboardInterrupt, SystemExit):
+        cleanAndExit()
+
 
 # === Loadcell End ===
