@@ -8,5 +8,12 @@ Waste Management Wisely adalah bak sampah pintar sebagai solusi terkini untuk ma
 ## Wiring Diagram
 
 ## Ubidots Dashboard
+![Dashboard Ubidots Waiste](images/ubidots_dashboard.png)
 
 ## Android Application
+![Android Application UI](images/apps_1.png)
+![Android Application UI](images/apps_2.png)
+![Android Application UI](images/apps_3.png)
+![Android Application UI](images/apps_4.png)
+![Android Application UI](images/apps_5.png)
+![Android Application UI](images/apps_6.png)
