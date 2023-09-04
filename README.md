@@ -8,5 +8,16 @@ Waste Management Wisely adalah bak sampah pintar sebagai solusi terkini untuk ma
 ## Wiring Diagram
 
 ## Ubidots Dashboard
+![Dashboard Ubidots Waiste](images/ubidots_dashboard.png)
 
 ## Android Application
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="images/apps_1.png" alt="Android Application UI" width="300" height="533">
+    <img src="images/apps_2.png" alt="Android Application UI" width="300" height="533">
+    <img src="images/apps_3.png" alt="Android Application UI" width="300" height="533">
+    <img src="images/apps_4.png" alt="Android Application UI" width="300" height="533">
+    <img src="images/apps_5.png" alt="Android Application UI" width="300" height="533">
+    <img src="images/apps_6.png" alt="Android Application UI" width="300" height="533">
+</div>
+
